@@ -189,10 +189,10 @@ void start_blackjack(){
 *--------------------*--------------------*--------------------*--------------------* //PRINTPLAYERS
 |  player            |      wild woody    |   davyjone         |       will         |
 |                    |                    |                    |                    |
+|total: 10000000000  |                    |                    |                    |
+|                    |                    |                    |                    |
 |10/10/10/10/10      |                    |                    |                    |
 |= 22 (bust!)        |                    |                    |                    |
-|                    |                    |                    |                    |
-|                    |                    |                    |                    |
 *--------------------*--------------------*--------------------*--------------------* //PRINTPLAYERS
 PLAYER's TURN!
 round: 6/infinite
@@ -232,6 +232,11 @@ int play_blackjack(int trounds, int crounds, BlackJackGame blackjakky){
     std::cout << "> ";
     std::cin;
 
-    play_blackjack(trounds, crounds++, blackjakky);
-
+    if(crounds == trounds){
+        blackjakky.printResults();
+        between_lobby();
+    }
+    else{
+        play_blackjack(trounds, crounds++, blackjakky);
+    }
 }
