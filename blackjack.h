@@ -45,7 +45,7 @@ class BlackJackPlayer {
 class BlackJackGame {
 
     public:
-        void setGameType();
+        void setGameType(pType type, int count);
         int numPlayers();
         void fillSeats();
         void playDealer();
@@ -57,6 +57,7 @@ class BlackJackGame {
         void choiceDealer();
         void printResults();
         void checkWin();
+        void setPlayerName(std::string name);
 
     private:
         BlackJackPlayer p1;
@@ -64,7 +65,6 @@ class BlackJackGame {
         BlackJackPlayer p3;
         BlackJackPlayer p4;
         BlackJackPlayer dealer;
-    
 };
 
 #endif

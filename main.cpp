@@ -6,6 +6,8 @@
 void start_blackjack();
 int play_blackjack(int tr, int cr, BlackJackGame blackjakky);
 
+enum pType { Player, CPU, Dealer, NONE };
+
 int main(){
     int choice;
     std::cout << "Welcome to Ali's Casino! What would you like to play? (enter a number)" << std::endl;
@@ -64,7 +66,7 @@ void start_blackjack(){
     std::cin >> choice;
     if(choice == 1){
         std::cout << "Alright! It's just you versus the dealer!" << std::endl;
-        blackjackky.setGameType("No-CPU", 1);
+        blackjackky.setGameType(Player, 1);
     }
     else if(choice == 2){
         std::cout << "How many CPUs?" << std::endl;
@@ -75,19 +77,19 @@ void start_blackjack(){
         std::cin >> choice;
         if(choice == 1){
             std::cout << "One CPU it is!" << std::endl;
-            blackjackky.setGameType("CPU", 1);
+            blackjackky.setGameType(CPU, 1);
         }
         else if(choice == 2){
             std::cout << "Two CPUs it is!" << std::endl;
-            blackjackky.setGameType("CPU", 2);
+            blackjackky.setGameType(CPU, 2);
         }
         else if(choice == 3){
             std::cout << "Three CPUs it is!" << std::endl;
-            blackjackky.setGameType("CPU", 3);
+            blackjackky.setGameType(CPU, 3);
         }
         else{
             std::cout << "I didn't quite catch that, lets default to three." << std::endl;
-            blackjackky.setGameType("CPU", 3);
+            blackjackky.setGameType(CPU, 3);
         }
 
     }
@@ -100,19 +102,19 @@ void start_blackjack(){
         std::cin >> choice;
         if(choice == 1){
             std::cout << "One friend it is!" << std::endl;
-            blackjackky.setGameType("No-CPU", 2);
+            blackjackky.setGameType(Player, 2);
         }
         else if(choice == 2){
             std::cout << "Two friends it is!" << std::endl;
-            blackjackky.setGameType("No-CPU", 3);
+            blackjackky.setGameType(Player, 3);
         }
         else if(choice == 3){
             std::cout << "Three friends it is!" << std::endl;
-            blackjackky.setGameType("No-CPU", 4);
+            blackjackky.setGameType(Player, 4);
         }
         else{
             std::cout << "I didn't quite catch that, lets default to one." << std::endl;
-            blackjackky.setGameType("No-CPU", 1);
+            blackjackky.setGameType(Player, 1);
         }
 
         std::string name;
