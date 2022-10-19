@@ -65,6 +65,7 @@ class BlackJackGame {
         BlackJackPlayer p3;
         BlackJackPlayer p4;
         BlackJackPlayer dealer;
-};
+};'?
+'
 
 #endif

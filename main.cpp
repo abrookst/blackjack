@@ -209,7 +209,7 @@ int play_blackjack(int trounds, int crounds, BlackJackGame blackjakky){
     blackjakky.printDealer();
     for(int i = 1; i != blackjakky.numPlayers(); i++){
         blackjakky.playPlayer(i);
-        blackjakky.printPlayer(i);
+        blackjakky.printPlayers();
 
         blackjakky.printTurn(i);
 
