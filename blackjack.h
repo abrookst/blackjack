@@ -50,9 +50,9 @@ class BlackJackGame {
         void fillSeats();
         void playDealer();
         void printDealer();
-        void playPlayer();
-        void printPlayer();
-        void printTurn();
+        void playPlayer(int pNum);
+        void printPlayers();
+        void printTurn(int pNum);
         void choicePlayer();
         void choiceDealer();
         void printResults();
